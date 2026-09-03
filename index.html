@@ -1,356 +1,223 @@
 <!DOCTYPE html>
-
-<html lang="en" dir="ltr">
-
+<html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title>Aditya's Portfolio</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Aditya Anand — developer, creator and problem solver.">
+  <title>Aditya Anand — Developer Portfolio</title>
   <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
-  <link rel="stylesheet" href="style.css" />
-  <!-- Fontawesome CDN Link -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.11/typed.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-  <!-- Move to up button -->
-  <div class="scroll-button">
-    <a href="#home"><i class="fas fa-arrow-up"></i></a>
-  </div>
-  <!-- navigation menu -->
-  <nav>
-    <div class="navbar">
-      <div class="logo"><a href="#">Aditya's Portfolio.</a></div>
-      <ul class="menu">
-        <li><a href="#home">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#services">Services</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#contact">Contact</a></li>
-        <div class="cancel-btn">
-          <i class="fas fa-times"></i>
+  <div class="noise"></div>
+  <div class="cursor-glow"></div>
+
+  <header class="site-header" id="top">
+    <nav class="navbar">
+      <a class="brand" href="#home" aria-label="Aditya Anand home">
+        <span class="brand-mark">AA</span>
+        <span>Aditya Anand<span class="dot">.</span></span>
+      </a>
+
+      <button class="menu-toggle" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span>
+      </button>
+
+      <div class="nav-links">
+        <a class="active" href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </div>
+
+      <a class="nav-cta" href="#contact">Let's talk <span>↗</span></a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero section" id="home">
+      <div class="hero-grid"></div>
+      <div class="hero-content reveal">
+        <div class="eyebrow"><span class="status-dot"></span> Available for opportunities</div>
+        <p class="hero-kicker">HELLO, I'M ADITYA</p>
+        <h1>Building digital<br><span class="gradient-text">experiences</span> that matter.</h1>
+        <p class="hero-description">
+          A developer and creative problem-solver from India, turning ideas into clean,
+          functional and memorable digital products.
+        </p>
+
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#projects">Explore my work <span>↗</span></a>
+          <a class="btn btn-ghost" href="https://drive.google.com/file/d/1IfPextCpnR4rBQST2T6-5c-JlVsgl5Ak/view?usp=drive_link" target="_blank" rel="noopener">View résumé <span>↓</span></a>
         </div>
-      </ul>
-      <div class="media-icons">
-        <a href="https://www.linkedin.com/in/adii-anand/" target="_blank"><i class="fab fa-linkedin"></i></a>
-        <a href="https://www.instagram.com/aditya._.anand/" target="_blank"><i class="fab fa-instagram"></i></a>
-        <a href="https://twitter.com/adii_anand_" target="_blank"><i class="fab fa-twitter"></i></a>
-      </div>
-    </div>
-    <div class="menu-btn">
-      <i class="fas fa-bars"></i>
-    </div>
-  </nav>
 
-  <!-- Home Section Start -->
-  <section class="home" id="home">
-    <div class="home-content">
-      <div class="text">
-        <div class="text-one">Hello, I'm</div>
-        <div class="text-two">Aditya Anand</div>
-        <div class="text-three">And I'm a <span id="element"></span></div>
-        <div class="text-four">From India</div>
-      </div>
-      <div class="button">
-        <a href="#contact"><button type="button"
-          >Hire
-          Me</button>
-        </a>  
-      </div>
-    </div>
-  </section>
-
-  <!-- About Section Start -->
-  <section class="about" id="about">
-    <div class="content">
-      <div class="title"><span>About Me</span></div>
-      <div class="about-details">
-        <div class="left">
-          <img src="assets/about.png" alt="" />
-        </div>
-        <div class="right">
-          <div class="topic">Learning Is My Passion</div>
-          <p>
-            Hi there, I'm a programmer interested in problem-solving and has a strong desire to embark on a fulfilling
-            career in the field. Throughout my academic journey, I've developed a solid foundation in various aspects of
-            information technology, and I'm eager to apply my knowledge and skills in a professional setting.
-            <br>
-            My academic background has equipped me with a diverse set of technical skills, including programming
-            languages such as Java, Java Script, HTML, CSS and Python, database management, web development, and
-            problem-solving.
-          </p>
-          <br>
-          <p> I'm a quick learner who thrives on challenges and is always eager to expand my skill set to stay current
-            in this rapidly evolving industry.
-
-            In addition to my technical abilities, I'm a strong believer in teamwork and effective communication.
-          </p>
-          <div class="button">
-            <a href="https://drive.google.com/file/d/1IfPextCpnR4rBQST2T6-5c-JlVsgl5Ak/view?usp=drive_link" target="_blank"><button>Download CV</button>
-            </a>  
-          </div>
+        <div class="hero-meta">
+          <span>Currently learning</span>
+          <strong id="typed-text">Java</strong>
         </div>
       </div>
-    </div>
-  </section>
 
-  <!-- My Skill Section Start -->
-  <!-- Section Tag and Other Div will same where we need to put same CSS -->
-  <section class="skills" id="skills">
-    <div class="content">
-      <div class="title"><span>My Skills</span></div>
-      <div class="skills-details">
-        <div class="text">
-          <div class="topic">Skills Reflects Our Knowledge</div>
-          <p>I have intermediate-level skills in programming languages such as Java, Python, and JavaScript, enabling me
-            to develop applications and solve complex problems. In web development, I'm proficient in HTML and CSS for
-            creating visually appealing interfaces. I possess experience in both frontend and backend development,
-            utilizing frameworks like React, Vue.js, Express.js, and Django. Additionally, I've worked in collaborative
-            academic projects, prioritizing clear communication and teamwork.
-          </p>
-          <div class="experience">
-            <div class="num">1</div>
-            <div class="exp">
-              Year Of <br />
-              Experience
-            </div>
-          </div>
+      <div class="hero-visual reveal">
+        <div class="orb orb-one"></div>
+        <div class="orb orb-two"></div>
+        <div class="portrait-card">
+          <div class="portrait-ring"></div>
+          <img src="assets/about.png" alt="Aditya Anand">
+          <div class="floating-tag tag-one">Java</div>
+          <div class="floating-tag tag-two">Web Dev</div>
+          <div class="floating-tag tag-three">Creative</div>
         </div>
-        <div class="boxes">
-          <div class="box">
-            <div class="topic">HTML</div>
-            <div class="per">80%</div>
-          </div>
-          <div class="box">
-            <div class="topic">JAVA</div>
-            <div class="per">50%</div>
-          </div>
-          <div class="box">
-            <div class="topic">JavScript</div>
-            <div class="per">50%</div>
-          </div>
-          <div class="box">
-            <div class="topic">Python</div>
-            <div class="per">50%</div>
-          </div>
+        <div class="availability-card">
+          <span class="mini-dot"></span>
+          <div><strong>Open to work</strong><small>India · Remote</small></div>
         </div>
       </div>
-    </div>
-  </section>
 
-  <!-- My Services Section Start -->
-  <section class="services" id="services">
-    <div class="content">
-      <div class="title"><span>My Services</span></div>
-      <div class="boxes">
-        <div class="box">
-          <div class="icon">
-            <i class="fas fa-desktop"></i>
+      <div class="scroll-cue"><span></span> Scroll to explore</div>
+    </section>
+
+    <section class="marquee" aria-label="Skills">
+      <div class="marquee-track">
+        <span>JAVA</span><i>✦</i><span>JAVASCRIPT</span><i>✦</i><span>PYTHON</span><i>✦</i>
+        <span>HTML / CSS</span><i>✦</i><span>PROBLEM SOLVING</span><i>✦</i>
+        <span>JAVA</span><i>✦</i><span>JAVASCRIPT</span><i>✦</i><span>PYTHON</span><i>✦</i>
+      </div>
+    </section>
+
+    <section class="section about" id="about">
+      <div class="section-head reveal">
+        <span class="section-number">01</span>
+        <div><p class="eyebrow">A little about me</p><h2>Curious by nature.<br><span>Builder by choice.</span></h2></div>
+      </div>
+
+      <div class="about-grid">
+        <div class="about-copy reveal">
+          <p class="lead">I'm a programmer interested in problem-solving and building useful things with technology.</p>
+          <p>My academic journey has given me a foundation across programming, web development, databases and software fundamentals. I'm constantly learning and looking for opportunities to turn that knowledge into real-world work.</p>
+          <p>I enjoy collaborating, taking on challenges and improving a project one thoughtful detail at a time.</p>
+          <div class="about-stats">
+            <div><strong>01+</strong><span>Years<br>learning & building</span></div>
+            <div><strong>06</strong><span>Projects<br>shipped</span></div>
+            <div><strong>05+</strong><span>Core<br>technologies</span></div>
           </div>
-          <div class="topic">Web Devlopment</div>
-          <p>As a full-stack web developer, I specialize in crafting dynamic and visually engaging websites, utilizing a
-            wide array of technologies to create seamless user experiences.</p>
         </div>
-        <div class="box">
-          <div class="icon">
-            <i class="fas fa-paint-brush"></i>
-          </div>
-          <div class="topic">Graphic Design</div>
-          <p>My graphic design skills allow me to blend creativity and precision, producing captivating visuals that
-            enhance brand identities and user interfaces.</p>
-        </div>
-        <div class="box">
-          <div class="icon">
-            <i class="fas fa-chart-line"></i>
-          </div>
-          <div class="topic">Content Creation</div>
-          <p>As a content creator, I have a knack for crafting engaging and informative content across various
-            platforms, from blog posts to social media, to leave a lasting impact on audiences.</p>
-        </div>
-        <div class="box">
-          <div class="icon">
-            <i class="fab fa-java"></i>
-          </div>
-          <div class="topic">Java Developement</div>
-          <p>As a beginner in Java development, I'm ready to contribute to the creation of robust and scalable
-            applications using this widely-used language.</p>
-        </div>
-        <div class="box">
-          <div class="icon">
-            <i class="fas fa-video"></i>
-          </div>
-          <div class="topic">Video Editing</div>
-          <p>I bring stories to life through video editing, weaving together footage, effects, and sound to create
-            compelling narratives that captivate and engage audiences.</p>
-        </div>
-        <div class="box">
-          <div class="icon">
-            <i class="fab fa-python"></i>
-          </div>
-          <div class="topic">Python Developement</div>
-          <p>In the realm of Python development, I'm excited to harness the power of this versatile language to build
-            applications, automate tasks, and analyze data.</p>
+
+        <div class="principles reveal">
+          <div class="principle"><span>01</span><div><h3>Learn continuously</h3><p>Technology changes fast. I like staying curious and building while I learn.</p></div></div>
+          <div class="principle"><span>02</span><div><h3>Keep it useful</h3><p>Good interfaces should look great, but they should first solve a real problem.</p></div></div>
+          <div class="principle"><span>03</span><div><h3>Work together</h3><p>Clear communication and teamwork turn individual skills into better outcomes.</p></div></div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- My projects section start -->
-  <section class="projects" id="projects">
-    <div class="content">
-      <div class="title"><span>My Projects</span></div>
-      <div class="carousel owl-carousel">
-        <div class="card">
-          <div class="box">
-            <a href="https://web-car-racing-game.netlify.app/" target="_blank"><img src="assets/image-2.png" alt="Racing Game Image"></a>
-            <div class="text">Car Racing</div>
-            <p>A Car Racing Game built with HTML and JavaScript with proper functionality.</p>
-          </div>
+    <section class="section skills" id="skills">
+      <div class="section-head reveal">
+        <span class="section-number">02</span>
+        <div><p class="eyebrow">What I work with</p><h2>Tools in my<br><span>toolbox.</span></h2></div>
+      </div>
+      <div class="skills-layout">
+        <div class="skill-intro reveal">
+          <p>I'm building a practical stack around programming, web development and creative digital work.</p>
+          <div class="skill-note">The percentages are a snapshot of my current confidence, not a limit.</div>
         </div>
-        <div class="card">
-          <div class="box">
-            <a href="https://indian-restaurant-website.netlify.app/" target="_blank"><img src="assets/image-7.png" alt="Landing Page Image"></a> 
-            <div class="text">Landing Page</div>
-            <p>A responsive website of Indian food Restaurant containig all sections.</p>
-          </div>
-        </div>
-        <div class="card">
-          <div class="box">
-            <a href="https://login-form-webdev.netlify.app/" target="_blank"><img src="assets/image-4.png" alt="Login Form Image"></a>  
-            <div class="text">Login Form</div>
-            <p>A Login Form, crafted with HTML, JavaScript & CSS, boasts a sleek and user-friendly design.</p>
-          </div>
-        </div>
-        <div class="card">
-          <div class="box">
-            <a href="https://codepen.io/AdiiAnand/pen/XWoYWPd" target="_blank"><img src="assets/image-3.png" alt="Password Generator Image"></a>  
-            <div class="text">Password Generator</div>
-            <p>You have to specify length & what you want to include uppercase, lowercase, etc.</p>
-          </div>
-        </div>
-        <div class="card">
-          <div class="box">
-            <a href="https://dragon-game-web.netlify.app/" target="_blank">  <img src="assets/image-1.png" alt="Dragon Game Image"></a> 
-            <div class="text">Dragon Game</div>
-            <p>A simple game where users needs to dodge themselves to score a point.</p>
-          </div>
-        </div>
-        <div class="card">
-          <div class="box">
-            <a href="https://calculator-webdev.netlify.app/" target="_blank"><img src="assets/image-6.png" alt="Calculator Image"></a> 
-            <div class="text">Calculator</div>
-            <p>Basic Calculator built using HTML, CSS and JavaScript that performs arithematic functions. </p>
-          </div>
+        <div class="skill-list reveal">
+          <div class="skill-row"><span>01</span><strong>HTML & CSS</strong><div class="bar"><i style="--w:80%"></i></div><b>80</b></div>
+          <div class="skill-row"><span>02</span><strong>Java</strong><div class="bar"><i style="--w:50%"></i></div><b>50</b></div>
+          <div class="skill-row"><span>03</span><strong>JavaScript</strong><div class="bar"><i style="--w:50%"></i></div><b>50</b></div>
+          <div class="skill-row"><span>04</span><strong>Python</strong><div class="bar"><i style="--w:50%"></i></div><b>50</b></div>
+          <div class="skill-row"><span>05</span><strong>Problem Solving</strong><div class="bar"><i style="--w:65%"></i></div><b>65</b></div>
         </div>
       </div>
-  </section>
+    </section>
 
-  <!-- Contact Me section Start -->
-  <section class="contact" id="contact">
-    <div class="content">
-      <div class="title"><span>Contact Me</span></div>
-      <div class="contact-content">
-        <div class="column left">
-          <div class="topic">Have Any Projects?</div>
-          <p>Ready to bring your vision to life? Let's get started! Click on the submit option to initiate a
-            conversation and discuss your project. I'm here to listen, understand your goals, and provide personalized
-            solutions. Whether you have questions, ideas, or specific requirements, I'm just a click away to kickstart
-            our collaboration.</p>
-          <div class="icons">
-            <div class="row">
-              <i class="fas fa-user"></i>
-              <div class="info">
-                <div class="head">Name</div>
-                <div class="sub-title">Aditya Anand</div>
-              </div>
-            </div>
-            <div class="row">
-              <i class="fas fa-map-marker-alt"></i>
-              <div class="info">
-                <div class="head">Address</div>
-                <div class="sub-title">Bihar, India</div>
-              </div>
-            </div>
-            <div class="row">
-              <i class="fas fa-envelope"></i>
-              <div class="info">
-                <div class="head">Email</div>
-                <div class="sub-title">adityaanand430@gmail.com</div>
-              </div>
-            </div>
-            <br>
-            <div class="row">
-              <i class="fas fa-logo"></i>
-              <div class="info">
-                <a href="https://www.linkedin.com/in/adii-anand/" target="_blank"><img src="assets/linkedin.gif"
-                    alt="LinkedIn"></a>
-              </div>
-              <div class="info">
-                <a href="https://github.com/AdiiAnand" target="_blank"><img src="assets/github.gif" alt="GitHub"></a>
-              </div>
-              <div class="info">
-                <a href="https://t.me/The_AdityaAnand" target="_blank"><img src="assets/telegram.gif"
-                    alt="Telegram"></a>
-              </div>
-              <div class="info">
-                <a href="https://linktr.ee/aditya._.anand" target="_blank"><img src="assets/linktree.png"
-                    alt="Linktree"></a>
-              </div>
-            </div>
+    <section class="section services" id="services">
+      <div class="section-head reveal">
+        <span class="section-number">03</span>
+        <div><p class="eyebrow">What I can do</p><h2>From idea to<br><span>interface.</span></h2></div>
+      </div>
+      <div class="service-grid">
+        <article class="service-card reveal"><span class="service-icon">⌁</span><small>01 / DEVELOPMENT</small><h3>Web Development</h3><p>Responsive, interactive websites focused on clean structure and a smooth user experience.</p><a href="#contact">Let's build ↗</a></article>
+        <article class="service-card reveal"><span class="service-icon">✦</span><small>02 / CREATIVE</small><h3>Graphic Design</h3><p>Visual concepts that combine creativity, clarity and consistency across digital experiences.</p><a href="#contact">Let's create ↗</a></article>
+        <article class="service-card reveal"><span class="service-icon">◌</span><small>03 / CONTENT</small><h3>Content Creation</h3><p>Engaging digital content designed to communicate ideas clearly and leave an impression.</p><a href="#contact">Start a project ↗</a></article>
+        <article class="service-card reveal"><span class="service-icon">{ }</span><small>04 / PROGRAMMING</small><h3>Java & Python</h3><p>Learning and building with versatile programming languages for applications, automation and problem solving.</p><a href="#contact">Talk tech ↗</a></article>
+      </div>
+    </section>
+
+    <section class="section projects" id="projects">
+      <div class="section-head reveal">
+        <span class="section-number">04</span>
+        <div><p class="eyebrow">Selected work</p><h2>Things I've<br><span>built.</span></h2></div>
+        <p class="section-side">A few experiments and projects from my journey so far.</p>
+      </div>
+
+      <div class="project-grid">
+        <a class="project-card project-large reveal" href="https://web-car-racing-game.netlify.app/" target="_blank" rel="noopener">
+          <img src="assets/image-2.png" alt="Car Racing project">
+          <div class="project-overlay"><span>01 / GAME</span><h3>Car Racing</h3><p>HTML + JavaScript</p><b>↗</b></div>
+        </a>
+        <a class="project-card reveal" href="https://indian-restaurant-website.netlify.app/" target="_blank" rel="noopener">
+          <img src="assets/image-7.png" alt="Indian restaurant website">
+          <div class="project-overlay"><span>02 / WEB</span><h3>Indian Restaurant</h3><p>Responsive landing page</p><b>↗</b></div>
+        </a>
+        <a class="project-card reveal" href="https://login-form-webdev.netlify.app/" target="_blank" rel="noopener">
+          <img src="assets/image-4.png" alt="Login form project">
+          <div class="project-overlay"><span>03 / UI</span><h3>Login Form</h3><p>HTML + CSS + JavaScript</p><b>↗</b></div>
+        </a>
+        <a class="project-card reveal" href="https://codepen.io/AdiiAnand/pen/XWoYWPd" target="_blank" rel="noopener">
+          <img src="assets/image-3.png" alt="Password generator project">
+          <div class="project-overlay"><span>04 / TOOL</span><h3>Password Generator</h3><p>Interactive utility</p><b>↗</b></div>
+        </a>
+        <a class="project-card reveal" href="https://dragon-game-web.netlify.app/" target="_blank" rel="noopener">
+          <img src="assets/image-1.png" alt="Dragon game project">
+          <div class="project-overlay"><span>05 / GAME</span><h3>Dragon Game</h3><p>JavaScript game</p><b>↗</b></div>
+        </a>
+        <a class="project-card reveal" href="https://calculator-webdev.netlify.app/" target="_blank" rel="noopener">
+          <img src="assets/image-6.png" alt="Calculator project">
+          <div class="project-overlay"><span>06 / TOOL</span><h3>Calculator</h3><p>HTML + CSS + JavaScript</p><b>↗</b></div>
+        </a>
+      </div>
+    </section>
+
+    <section class="section contact" id="contact">
+      <div class="contact-shell reveal">
+        <div class="contact-copy">
+          <p class="eyebrow">05 / GET IN TOUCH</p>
+          <h2>Have an idea?<br><span>Let's make it real.</span></h2>
+          <p>Have a project, opportunity or just want to say hello? Drop me a message and let's start a conversation.</p>
+          <div class="contact-details">
+            <a href="mailto:adityaanand430@gmail.com">adityaanand430@gmail.com ↗</a>
+            <span>India · Open to remote opportunities</span>
+          </div>
+          <div class="socials">
+            <a href="https://www.linkedin.com/in/adii-anand/" target="_blank" rel="noopener">LinkedIn</a>
+            <a href="https://github.com/AdiiAnand" target="_blank" rel="noopener">GitHub</a>
+            <a href="https://t.me/The_AdityaAnand" target="_blank" rel="noopener">Telegram</a>
+            <a href="https://linktr.ee/aditya._.anand" target="_blank" rel="noopener">Linktree</a>
           </div>
         </div>
-        <div class="column right">
-          <div class="text">Message me</div>
-          <form action="https://getform.io/f/23702988-ac4b-4cd7-ae3e-b1c0b931db4d" method="POST">
-            <div class="fields">
-              <div class="field name">
-                <input type="text" placeholder="Name" required name="name">
-              </div>
-              <div class="field email">
-                <input type="email" placeholder="Email" required name="email">
-              </div>
-            </div>
-            <div class="field">
-              <input type="text" placeholder="Subject" required name="subject">
-            </div>
-            <div class="field textarea">
-              <textarea cols="30" rows="10" placeholder="Message.." required name="message"></textarea>
-              <input type="hidden" name="_gotcha" style="display:none !important">
-            </div>
-            <div class="button-area">
-              <button type="submit">Send message</button>
-            </div>
-          </form>
-        </div>
-      </div>
-    </div>
-  </section>
 
-  <!-- Footer Section Start -->
+        <form class="contact-form" action="https://getform.io/f/23702988-ac4b-4cd7-ae3e-b1c0b931db4d" method="POST">
+          <label><span>Your name</span><input type="text" name="name" placeholder="Aditya..." required></label>
+          <label><span>Email address</span><input type="email" name="email" placeholder="you@example.com" required></label>
+          <label><span>Subject</span><input type="text" name="subject" placeholder="Let's build something..." required></label>
+          <label><span>Message</span><textarea name="message" rows="5" placeholder="Tell me a little about your idea..." required></textarea></label>
+          <input type="hidden" name="_gotcha" style="display:none !important">
+          <button class="btn btn-primary" type="submit">Send message <span>↗</span></button>
+        </form>
+      </div>
+    </section>
+  </main>
+
   <footer>
-    <div class="text">
-      <span>Created By <a href="#">Aditya Anand</a> | <span class="far fa-copyright"> 2023 All Rights Reserved</span>
-    </div>
+    <a class="brand" href="#top"><span class="brand-mark">AA</span><span>Aditya Anand<span class="dot">.</span></span></a>
+    <p>Designed & built with curiosity · © <span id="year"></span></p>
+    <a href="#top" class="back-top">Back to top ↑</a>
   </footer>
-  <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
-  <!-- Load library from the CDN -->
-  <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
 
-  <!-- Setup and start animation! -->
-  <script>
-    var typed = new Typed('#element', {
-      strings: ['Developer', 'Freelancer', 'Content Creator'],
-      typeSpeed: 70,
-      loop: true,
-    });
-  </script>
   <script src="script.js"></script>
 </body>
-
 </html>
