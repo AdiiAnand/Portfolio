@@ -32,7 +32,7 @@ const observer = new IntersectionObserver(entries => {
 sections.forEach(section => observer.observe(section));
 
 const typed = document.getElementById('typed-text');
-const words = ['Java', 'JavaScript', 'Python', 'Web Development', 'Problem Solving'];
+const words = ['Java', 'DSA', 'JavaScript', 'React', 'MongoDB', 'Web Development'];
 let wi = 0, ci = 0, deleting = false;
 
 function typeLoop() {
