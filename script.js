@@ -1,56 +1,14 @@
-const header = document.querySelector('.site-header');
-const menu = document.querySelector('.menu-toggle');
-const nav = document.querySelector('.nav-links');
-const links = document.querySelectorAll('.nav-links a');
-
-window.addEventListener('scroll', () => {
-  header.classList.toggle('scrolled', window.scrollY > 20);
-});
-
-menu.addEventListener('click', () => {
-  const open = nav.classList.toggle('open');
-  menu.setAttribute('aria-expanded', open);
-});
-
-links.forEach(link => link.addEventListener('click', () => {
-  nav.classList.remove('open');
-  menu.setAttribute('aria-expanded', 'false');
-}));
-
-const sections = [...document.querySelectorAll('main section[id]')];
-const observer = new IntersectionObserver(entries => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.querySelectorAll('.reveal').forEach((el, i) => {
-        setTimeout(() => el.classList.add('visible'), i * 70);
-      });
-      const id = entry.target.id;
-      links.forEach(link => link.classList.toggle('active', link.getAttribute('href') === `#${id}`));
-    }
-  });
-}, { threshold: 0.18 });
-sections.forEach(section => observer.observe(section));
-
-const typed = document.getElementById('typed-text');
-const words = ['Java', 'DSA', 'JavaScript', 'React', 'MongoDB', 'Web Development'];
-let wi = 0, ci = 0, deleting = false;
-
-function typeLoop() {
-  const word = words[wi];
-  typed.textContent = deleting ? word.slice(0, ci--) : word.slice(0, ci++);
-  let delay = deleting ? 55 : 90;
-  if (!deleting && ci > word.length) { deleting = true; delay = 1300; }
-  if (deleting && ci < 0) { deleting = false; wi = (wi + 1) % words.length; ci = 0; delay = 350; }
-  setTimeout(typeLoop, delay);
-}
-typeLoop();
-
-document.getElementById('year').textContent = new Date().getFullYear();
-
-const glow = document.querySelector('.cursor-glow');
-window.addEventListener('pointermove', e => {
-  glow.animate(
-    { left: `${e.clientX}px`, top: `${e.clientY}px` },
-    { duration: 500, fill: 'forwards' }
-  );
-});
+const header=document.querySelector('.header');
+const menu=document.querySelector('.menu');
+const nav=document.querySelector('.nav');
+const navLinks=document.querySelectorAll('.nav a');
+window.addEventListener('scroll',()=>header.classList.toggle('scrolled',scrollY>20));
+menu.addEventListener('click',()=>{nav.classList.toggle('open');menu.innerHTML=nav.classList.contains('open')?'<i class="fa-solid fa-xmark"></i>':'<i class="fa-solid fa-bars"></i>'});
+navLinks.forEach(a=>a.addEventListener('click',()=>nav.classList.remove('open')));
+const typed=document.getElementById('typed');
+const words=['Java learner','DSA explorer','web developer','problem solver','tech enthusiast'];let wi=0,ci=0,del=false;
+function type(){const w=words[wi];typed.textContent=del?w.slice(0,ci--):w.slice(0,ci++);let d=del?45:75;if(!del&&ci>w.length){del=true;d=1100}if(del&&ci<0){del=false;wi=(wi+1)%words.length;ci=0;d=300}setTimeout(type,d)}type();
+const reveal=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');reveal.unobserve(e.target)}}),{threshold:.12});document.querySelectorAll('.reveal').forEach(e=>reveal.observe(e));
+const sections=[...document.querySelectorAll('main section[id]')];const linkMap=[...navLinks];const activeObs=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting)linkMap.forEach(a=>a.classList.toggle('active',a.getAttribute('href')==='#'+e.target.id))}),{rootMargin:'-35% 0px -55%'});sections.forEach(s=>activeObs.observe(s));
+document.getElementById('year').textContent=new Date().getFullYear();
+const canvas=document.getElementById('particles'),ctx=canvas.getContext('2d');let dots=[],W,H;function resize(){W=canvas.width=innerWidth*devicePixelRatio;H=canvas.height=innerHeight*devicePixelRatio;canvas.style.width=innerWidth+'px';canvas.style.height=innerHeight+'px';ctx.setTransform(devicePixelRatio,0,0,devicePixelRatio,0,0);dots=Array.from({length:55},()=>({x:Math.random()*innerWidth,y:Math.random()*innerHeight,vx:(Math.random()-.5)*.18,vy:(Math.random()-.5)*.18,r:Math.random()*1.4+.3}))}function particleLoop(){ctx.clearRect(0,0,innerWidth,innerHeight);for(const p of dots){p.x+=p.vx;p.y+=p.vy;if(p.x<0||p.x>innerWidth)p.vx*=-1;if(p.y<0||p.y>innerHeight)p.vy*=-1;ctx.beginPath();ctx.arc(p.x,p.y,p.r,0,Math.PI*2);ctx.fillStyle='rgba(190,180,255,.42)';ctx.fill()}for(let i=0;i<dots.length;i++)for(let j=i+1;j<dots.length;j++){const a=dots[i],b=dots[j],dx=a.x-b.x,dy=a.y-b.y,d=Math.hypot(dx,dy);if(d<125){ctx.strokeStyle=`rgba(110,120,190,${(1-d/125)*.12})`;ctx.lineWidth=1;ctx.beginPath();ctx.moveTo(a.x,a.y);ctx.lineTo(b.x,b.y);ctx.stroke()}}requestAnimationFrame(particleLoop)}resize();addEventListener('resize',resize);particleLoop();
