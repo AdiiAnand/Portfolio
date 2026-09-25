@@ -3,215 +3,116 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Aditya Anand — developer, creator and problem solver.">
-  <title>Aditya Anand — Developer Portfolio</title>
+  <meta name="description" content="Aditya Anand — MCA student at NIT Agartala, learning Java, DSA and modern web development.">
+  <title>Aditya Anand | Developer Portfolio</title>
   <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="noise"></div>
-  <div class="cursor-glow"></div>
+  <canvas id="particles"></canvas>
+  <div class="ambient ambient-one"></div><div class="ambient ambient-two"></div>
 
-  <header class="site-header" id="top">
-    <nav class="navbar">
-      <a class="brand" href="#home" aria-label="Aditya Anand home">
-        <span class="brand-mark">AA</span>
-        <span>Aditya Anand<span class="dot">.</span></span>
-      </a>
-
-      <button class="menu-toggle" aria-label="Open menu" aria-expanded="false">
-        <span></span><span></span>
-      </button>
-
-      <div class="nav-links">
-        <a class="active" href="#home">Home</a>
-        <a href="#about">About</a>
-        <a href="#skills">Skills</a>
-        <a href="#projects">Projects</a>
-        <a href="#contact">Contact</a>
-      </div>
-
-      <a class="nav-cta" href="#contact">Let's talk <span>↗</span></a>
+  <header class="header" id="top">
+    <a class="logo" href="#home"><span>AA</span><b>Aditya Anand</b></a>
+    <nav class="nav">
+      <a class="active" href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#education">Journey</a>
+      <a href="#stack">Stack</a>
+      <a href="#work">Work</a>
+      <a href="#contact">Contact</a>
     </nav>
+    <a class="header-btn" href="https://github.com/AdiiAnand" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i> GitHub</a>
+    <button class="menu" aria-label="Toggle navigation"><i class="fa-solid fa-bars"></i></button>
   </header>
 
   <main>
-    <section class="hero section" id="home">
-      <div class="hero-grid"></div>
-      <div class="hero-content reveal">
-        <div class="eyebrow"><span class="status-dot"></span> Available for opportunities</div>
-        <p class="hero-kicker">HELLO, I'M ADITYA</p>
-        <h1>Building digital<br><span class="gradient-text">experiences</span> that matter.</h1>
-        <p class="hero-description">
-          An MCA student at NIT Agartala, building a strong foundation in Java, DSA and modern web development — one project at a time.
-        </p>
-
+    <section class="hero" id="home">
+      <div class="hero-bg"></div>
+      <div class="hero-copy reveal">
+        <div class="eyebrow"><span></span> MCA • NIT AGARTALA • 2026</div>
+        <h1>I'm a <strong id="typed">Java learner</strong><br><em>building my way forward.</em></h1>
+        <p>I'm Aditya — a curious developer learning Java, DSA and modern web development while turning small ideas into real projects.</p>
         <div class="hero-actions">
-          <a class="btn btn-primary" href="#projects">Explore my work <span>↗</span></a>
-          <a class="btn btn-ghost" href="https://drive.google.com/file/d/1IfPextCpnR4rBQST2T6-5c-JlVsgl5Ak/view?usp=drive_link" target="_blank" rel="noopener">View résumé <span>↓</span></a>
+          <a class="btn primary" href="#work">Explore my work <i class="fa-solid fa-arrow-right"></i></a>
+          <a class="btn secondary" href="https://drive.google.com/file/d/1IfPextCpnR4rBQST2T6-5c-JlVsgl5Ak/view?usp=drive_link" target="_blank" rel="noopener">Résumé <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
         </div>
-
-        <div class="hero-meta">
-          <span>Currently learning</span>
-          <strong id="typed-text">Java</strong>
-        </div>
-      </div>
-
-      <div class="hero-visual reveal">
-        <div class="orb orb-one"></div>
-        <div class="orb orb-two"></div>
-        <div class="portrait-card">
-          <div class="portrait-ring"></div>
-          <img src="assets/about.png" alt="Aditya Anand">
-          <div class="floating-tag tag-one">Java</div>
-          <div class="floating-tag tag-two">Web Dev</div>
-          <div class="floating-tag tag-three">Creative</div>
-        </div>
-        <div class="availability-card">
-          <span class="mini-dot"></span>
-          <div><strong>Open to work</strong><small>India · Remote</small></div>
+        <div class="social-row">
+          <a href="https://www.linkedin.com/in/adii-anand/" target="_blank" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+          <a href="https://github.com/AdiiAnand" target="_blank" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+          <a href="https://t.me/The_AdityaAnand" target="_blank" aria-label="Telegram"><i class="fa-brands fa-telegram"></i></a>
+          <a href="https://linktr.ee/aditya._.anand" target="_blank" aria-label="Linktree"><i class="fa-solid fa-link"></i></a>
         </div>
       </div>
-
-      <div class="scroll-cue"><span></span> Scroll to explore</div>
-    </section>
-
-    <section class="marquee" aria-label="Skills">
-      <div class="marquee-track">
-        <span>JAVA</span><i>✦</i><span>DSA</span><i>✦</i><span>JAVASCRIPT</span><i>✦</i><span>REACT</span><i>✦</i><span>MONGODB</span><i>✦</i><span>WEB DEVELOPMENT</span><i>✦</i>
-        <span>JAVA</span><i>✦</i><span>DSA</span><i>✦</i><span>JAVASCRIPT</span><i>✦</i><span>REACT</span><i>✦</i><span>MONGODB</span><i>✦</i>
+      <div class="hero-photo reveal">
+        <div class="photo-frame"><img src="assets/about.png" alt="Aditya Anand"></div>
+        <div class="photo-note"><span>01</span><div><b>Learning in public</b><small>One project at a time.</small></div></div>
       </div>
+      <div class="hero-bottom"><span>SCROLL TO EXPLORE</span><i class="fa-solid fa-arrow-down"></i></div>
     </section>
 
     <section class="section about" id="about">
-      <div class="section-head reveal">
-        <span class="section-number">01</span>
-        <div><p class="eyebrow">A little about me</p><h2>Curious by nature.<br><span>Builder by choice.</span></h2></div>
-      </div>
-
-      <div class="about-grid">
-        <div class="about-copy reveal">
-          <p class="lead">I'm an MCA student at NIT Agartala, currently focused on Java, DSA and modern web development.</p>
-          <p>Right now, I'm strengthening my Java fundamentals and DSA, while expanding into JavaScript, modern frontend frameworks, backend development and MongoDB.</p>
-          <p>I enjoy building projects, solving problems and learning the tools that help turn an idea into a useful product.</p>
-          <div class="about-stats">
-            <div><strong>01+</strong><span>Years<br>learning & building</span></div>
-            <div><strong>06</strong><span>Projects<br>shipped</span></div>
-            <div><strong>05+</strong><span>Core<br>technologies</span></div>
-          </div>
+      <div class="section-title reveal"><span>01 / ABOUT</span><h2>Not finished.<br><b>Just getting started.</b></h2></div>
+      <div class="about-layout">
+        <div class="about-text reveal">
+          <p class="big">I'm an MCA student at <b>NIT Agartala</b>, currently building strong fundamentals in programming and web development.</p>
+          <p>My current focus is Java and DSA, while I continue expanding into JavaScript, frontend frameworks, backend concepts and MongoDB. I like learning by actually building things — even when the project starts small.</p>
+          <p>This portfolio is a snapshot of that journey, not a claim that I've mastered everything.</p>
         </div>
-
-        <div class="principles reveal">
-          <div class="principle"><span>01</span><div><h3>Java + DSA</h3><p>Building strong programming fundamentals, data structures and problem-solving habits.</p></div></div>
-          <div class="principle"><span>02</span><div><h3>Modern Web</h3><p>Learning JavaScript deeply and moving toward modern frontend frameworks and full web applications.</p></div></div>
-          <div class="principle"><span>03</span><div><h3>Backend + Data</h3><p>Exploring backend development and MongoDB to understand how complete applications work.</p></div></div>
+        <div class="about-cards reveal">
+          <div><span>NOW</span><b>Java + DSA</b><small>Core programming & problem solving</small></div>
+          <div><span>NEXT</span><b>Web + JavaScript</b><small>Interactive interfaces & frameworks</small></div>
+          <div><span>BUILDING TOWARD</span><b>MongoDB + Full Stack</b><small>Backend, APIs & complete products</small></div>
         </div>
       </div>
     </section>
 
-    <section class="section skills" id="skills">
-      <div class="section-head reveal">
-        <span class="section-number">02</span>
-        <div><p class="eyebrow">My current stack</p><h2>Learning, building<br><span>and leveling up.</span></h2></div>
-        <p class="section-side">No fake percentages. These are the technologies I'm actively working with right now.</p>
+    <section class="section journey" id="education">
+      <div class="section-title reveal"><span>02 / JOURNEY</span><h2>A timeline of<br><b>where I'm headed.</b></h2></div>
+      <div class="timeline">
+        <div class="timeline-line"></div>
+        <article class="timeline-item reveal"><div class="timeline-dot"></div><div class="timeline-year">2026 — NOW</div><div class="timeline-card"><small>POSTGRADUATE</small><h3>Master of Computer Applications</h3><p>National Institute of Technology, Agartala</p><span>Java • DSA • Web Development</span></div></article>
+        <article class="timeline-item reveal"><div class="timeline-dot"></div><div class="timeline-year">CURRENT FOCUS</div><div class="timeline-card"><small>BUILDING</small><h3>From fundamentals to applications</h3><p>Strengthening programming, algorithms and the modern web stack through hands-on projects.</p><span>Java • JavaScript • React • MongoDB</span></div></article>
       </div>
+    </section>
+
+    <section class="section stack" id="stack">
+      <div class="section-title reveal"><span>03 / TECH STACK</span><h2>Tools I'm<br><b>learning with.</b></h2></div>
       <div class="stack-grid">
-        <article class="stack-card featured reveal"><div class="stack-top"><span class="stack-index">01</span><span class="stack-status">ACTIVE</span></div><div class="stack-icon">☕</div><h3>Java</h3><p>Core Java, OOP and the foundation I'm using for DSA.</p><div class="stack-tags"><span>Core Java</span><span>OOP</span><span>DSA</span></div></article>
-        <article class="stack-card reveal"><div class="stack-top"><span class="stack-index">02</span><span class="stack-status">ACTIVE</span></div><div class="stack-icon">⌘</div><h3>DSA</h3><p>Learning patterns, data structures and algorithmic problem solving.</p><div class="stack-tags"><span>Arrays</span><span>Linked Lists</span><span>Algorithms</span></div></article>
-        <article class="stack-card reveal"><div class="stack-top"><span class="stack-index">03</span><span class="stack-status">BUILDING</span></div><div class="stack-icon">&lt;/&gt;</div><h3>JavaScript</h3><p>Going beyond basics to build interactive, practical web applications.</p><div class="stack-tags"><span>ES6+</span><span>DOM</span><span>Async JS</span></div></article>
-        <article class="stack-card reveal"><div class="stack-top"><span class="stack-index">04</span><span class="stack-status">EXPLORING</span></div><div class="stack-icon">◈</div><h3>Frontend Frameworks</h3><p>Exploring modern component-based frontend development and its ecosystem.</p><div class="stack-tags"><span>React</span><span>Components</span><span>UI</span></div></article>
-        <article class="stack-card reveal"><div class="stack-top"><span class="stack-index">05</span><span class="stack-status">EXPLORING</span></div><div class="stack-icon">◆</div><h3>MongoDB</h3><p>Learning document databases and how application data flows through a backend.</p><div class="stack-tags"><span>MongoDB</span><span>CRUD</span><span>Database</span></div></article>
-        <article class="stack-card reveal"><div class="stack-top"><span class="stack-index">06</span><span class="stack-status">FOUNDATION</span></div><div class="stack-icon">◉</div><h3>HTML + CSS</h3><p>Using the fundamentals to create responsive and polished interfaces.</p><div class="stack-tags"><span>Semantic HTML</span><span>CSS</span><span>Responsive</span></div></article>
+        <article class="tech-card active reveal"><div class="tech-head"><span>01</span><i class="fa-brands fa-java"></i></div><h3>Java</h3><p>Core Java, OOP and the language I'm using to learn DSA properly.</p><div><b>ACTIVE</b><span>Core Java</span><span>OOP</span></div></article>
+        <article class="tech-card active reveal"><div class="tech-head"><span>02</span><i class="fa-solid fa-code"></i></div><h3>DSA</h3><p>Data structures, algorithms and problem-solving patterns.</p><div><b>ACTIVE</b><span>Arrays</span><span>Lists</span></div></article>
+        <article class="tech-card reveal"><div class="tech-head"><span>03</span><i class="fa-brands fa-js"></i></div><h3>JavaScript</h3><p>Learning the language behind interactive web experiences.</p><div><b>BUILDING</b><span>ES6+</span><span>DOM</span></div></article>
+        <article class="tech-card reveal"><div class="tech-head"><span>04</span><i class="fa-brands fa-react"></i></div><h3>React & Frameworks</h3><p>Moving from vanilla JavaScript toward component-based development.</p><div><b>EXPLORING</b><span>React</span><span>UI</span></div></article>
+        <article class="tech-card reveal"><div class="tech-head"><span>05</span><i class="fa-solid fa-database"></i></div><h3>MongoDB</h3><p>Learning how application data is stored, queried and connected to backends.</p><div><b>EXPLORING</b><span>CRUD</span><span>DB</span></div></article>
+        <article class="tech-card reveal"><div class="tech-head"><span>06</span><i class="fa-solid fa-laptop-code"></i></div><h3>HTML + CSS</h3><p>The foundation I use to turn ideas into responsive interfaces.</p><div><b>FOUNDATION</b><span>HTML</span><span>CSS</span></div></article>
       </div>
     </section>
 
-    <section class="section services" id="services">
-      <div class="section-head reveal">
-        <span class="section-number">03</span>
-        <div><p class="eyebrow">What I'm building toward</p><h2>From fundamentals<br><span>to real products.</span></h2></div>
-      </div>
-      <div class="service-grid">
-        <article class="service-card reveal"><span class="service-icon">01</span><small>FOUNDATION</small><h3>Java + DSA</h3><p>Strengthening problem solving, OOP, data structures and algorithms through consistent practice.</p><a href="#contact">View journey ↗</a></article>
-        <article class="service-card reveal"><span class="service-icon">02</span><small>FRONTEND</small><h3>Modern Web</h3><p>Building responsive interfaces with HTML, CSS and JavaScript, then taking them into frameworks.</p><a href="#projects">See projects ↗</a></article>
-        <article class="service-card reveal"><span class="service-icon">03</span><small>BACKEND</small><h3>Data + APIs</h3><p>Learning backend concepts, APIs and MongoDB to move from static pages toward complete applications.</p><a href="#contact">Let's connect ↗</a></article>
-        <article class="service-card reveal"><span class="service-icon">04</span><small>LONG TERM</small><h3>Full-Stack Builder</h3><p>The goal: combine strong fundamentals with modern tools and ship useful, maintainable products.</p><a href="#contact">Work together ↗</a></article>
-      </div>
-    </section>
-
-    <section class="section projects" id="projects">
-      <div class="section-head reveal">
-        <span class="section-number">04</span>
-        <div><p class="eyebrow">Selected work</p><h2>Things I've<br><span>built.</span></h2></div>
-        <p class="section-side">Early projects from my journey — with more ambitious builds coming as I learn.</p>
-      </div>
-
+    <section class="section work" id="work">
+      <div class="section-title work-title reveal"><span>04 / MY WORK</span><h2>My digital playground,<br><b>one project at a time.</b></h2><p>Small games, tools and websites that helped me learn by doing.</p></div>
       <div class="project-grid">
-        <a class="project-card project-large reveal" href="https://web-car-racing-game.netlify.app/" target="_blank" rel="noopener">
-          <img src="assets/image-2.png" alt="Car Racing project">
-          <div class="project-overlay"><span>01 / GAME</span><h3>Car Racing</h3><p>HTML + JavaScript</p><b>↗</b></div>
-        </a>
-        <a class="project-card reveal" href="https://indian-restaurant-website.netlify.app/" target="_blank" rel="noopener">
-          <img src="assets/image-7.png" alt="Indian restaurant website">
-          <div class="project-overlay"><span>02 / WEB</span><h3>Indian Restaurant</h3><p>Responsive landing page</p><b>↗</b></div>
-        </a>
-        <a class="project-card reveal" href="https://login-form-webdev.netlify.app/" target="_blank" rel="noopener">
-          <img src="assets/image-4.png" alt="Login form project">
-          <div class="project-overlay"><span>03 / UI</span><h3>Login Form</h3><p>HTML + CSS + JavaScript</p><b>↗</b></div>
-        </a>
-        <a class="project-card reveal" href="https://codepen.io/AdiiAnand/pen/XWoYWPd" target="_blank" rel="noopener">
-          <img src="assets/image-3.png" alt="Password generator project">
-          <div class="project-overlay"><span>04 / TOOL</span><h3>Password Generator</h3><p>Interactive utility</p><b>↗</b></div>
-        </a>
-        <a class="project-card reveal" href="https://dragon-game-web.netlify.app/" target="_blank" rel="noopener">
-          <img src="assets/image-1.png" alt="Dragon game project">
-          <div class="project-overlay"><span>05 / GAME</span><h3>Dragon Game</h3><p>JavaScript game</p><b>↗</b></div>
-        </a>
-        <a class="project-card reveal" href="https://calculator-webdev.netlify.app/" target="_blank" rel="noopener">
-          <img src="assets/image-6.png" alt="Calculator project">
-          <div class="project-overlay"><span>06 / TOOL</span><h3>Calculator</h3><p>HTML + CSS + JavaScript</p><b>↗</b></div>
-        </a>
+        <a class="project-card featured reveal" href="https://web-car-racing-game.netlify.app/" target="_blank" rel="noopener"><img src="assets/image-2.png" alt="Car Racing project"><div class="project-info"><span>01 / GAME</span><h3>Car Racing</h3><p>Interactive browser game</p><i>↗</i></div></a>
+        <a class="project-card reveal" href="https://indian-restaurant-website.netlify.app/" target="_blank" rel="noopener"><img src="assets/image-7.png" alt="Indian Restaurant project"><div class="project-info"><span>02 / WEB</span><h3>Indian Restaurant</h3><p>Responsive website</p><i>↗</i></div></a>
+        <a class="project-card reveal" href="https://login-form-webdev.netlify.app/" target="_blank" rel="noopener"><img src="assets/image-4.png" alt="Login Form project"><div class="project-info"><span>03 / UI</span><h3>Login Form</h3><p>Interactive authentication UI</p><i>↗</i></div></a>
+        <a class="project-card reveal" href="https://codepen.io/AdiiAnand/pen/XWoYWPd" target="_blank" rel="noopener"><img src="assets/image-3.png" alt="Password Generator project"><div class="project-info"><span>04 / TOOL</span><h3>Password Generator</h3><p>Utility built with JavaScript</p><i>↗</i></div></a>
+        <a class="project-card reveal" href="https://dragon-game-web.netlify.app/" target="_blank" rel="noopener"><img src="assets/image-1.png" alt="Dragon Game project"><div class="project-info"><span>05 / GAME</span><h3>Dragon Game</h3><p>JavaScript browser game</p><i>↗</i></div></a>
+        <a class="project-card reveal" href="https://calculator-webdev.netlify.app/" target="_blank" rel="noopener"><img src="assets/image-6.png" alt="Calculator project"><div class="project-info"><span>06 / TOOL</span><h3>Calculator</h3><p>Simple interactive utility</p><i>↗</i></div></a>
       </div>
     </section>
 
     <section class="section contact" id="contact">
-      <div class="contact-shell reveal">
-        <div class="contact-copy">
-          <p class="eyebrow">05 / GET IN TOUCH</p>
-          <h2>Have an idea?<br><span>Let's make it real.</span></h2>
-          <p>Have a project, opportunity or just want to say hello? Drop me a message and let's start a conversation.</p>
-          <div class="contact-details">
-            <a href="mailto:adityaanand430@gmail.com">adityaanand430@gmail.com ↗</a>
-            <span>India · Open to all opportunities</span>
-          </div>
-          <div class="socials">
-            <a href="https://www.linkedin.com/in/adii-anand/" target="_blank" rel="noopener">LinkedIn</a>
-            <a href="https://github.com/AdiiAnand" target="_blank" rel="noopener">GitHub</a>
-            <a href="https://t.me/The_AdityaAnand" target="_blank" rel="noopener">Telegram</a>
-            <a href="https://linktr.ee/aditya._.anand" target="_blank" rel="noopener">Linktree</a>
-          </div>
-        </div>
-
-        <form class="contact-form" action="https://getform.io/f/23702988-ac4b-4cd7-ae3e-b1c0b931db4d" method="POST">
-          <label><span>Your name</span><input type="text" name="name" placeholder="Aditya..." required></label>
-          <label><span>Email address</span><input type="email" name="email" placeholder="you@example.com" required></label>
-          <label><span>Subject</span><input type="text" name="subject" placeholder="Let's build something..." required></label>
-          <label><span>Message</span><textarea name="message" rows="5" placeholder="Tell me a little about your idea..." required></textarea></label>
-          <input type="hidden" name="_gotcha" style="display:none !important">
-          <button class="btn btn-primary" type="submit">Send message <span>↗</span></button>
-        </form>
+      <div class="contact-box reveal">
+        <div class="contact-copy"><span class="section-label">05 / CONTACT</span><h2>Got an idea?<br><b>Let's build it.</b></h2><p>For collaborations, opportunities, projects or just a good tech conversation — my inbox is open.</p><a class="mail" href="mailto:adityaanand430@gmail.com">adityaanand430@gmail.com <i class="fa-solid fa-arrow-up-right-from-square"></i></a></div>
+        <form class="contact-form" action="https://getform.io/f/23702988-ac4b-4cd7-ae3e-b1c0b931db4d" method="POST"><label>Name<input name="name" required placeholder="Your name"></label><label>Email<input type="email" name="email" required placeholder="you@example.com"></label><label>Message<textarea name="message" rows="5" required placeholder="Tell me what you're building..."></textarea></label><input type="hidden" name="_gotcha"><button class="btn primary" type="submit">Send message <i class="fa-solid fa-arrow-right"></i></button></form>
       </div>
     </section>
   </main>
 
-  <footer>
-    <a class="brand" href="#top"><span class="brand-mark">AA</span><span>Aditya Anand<span class="dot">.</span></span></a>
-    <p>Built while learning · Java · DSA · Web · MongoDB · © <span id="year"></span></p>
-    <a href="#top" class="back-top">Back to top ↑</a>
-  </footer>
-
+  <footer><div><a class="logo" href="#top"><span>AA</span><b>Aditya Anand</b></a><small>Built while learning • Java • DSA • Web • MongoDB</small></div><div class="footer-links"><a href="https://www.linkedin.com/in/adii-anand/" target="_blank">LinkedIn</a><a href="https://github.com/AdiiAnand" target="_blank">GitHub</a><a href="https://t.me/The_AdityaAnand" target="_blank">Telegram</a><a href="#top">Back to top ↑</a></div><p>© <span id="year"></span> Aditya Anand</p></footer>
   <script src="script.js"></script>
 </body>
 </html>
